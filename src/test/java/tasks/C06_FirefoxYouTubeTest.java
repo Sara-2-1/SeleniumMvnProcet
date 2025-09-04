@@ -26,7 +26,7 @@ public class C06_FirefoxYouTubeTest
         // 5. Minimize the window
         driver.manage().window().minimize();
 
-        // ننتظر شوي عشان يبان التغيير
+
         Thread.sleep(3000);
 
         // 6. Verify the page title again
