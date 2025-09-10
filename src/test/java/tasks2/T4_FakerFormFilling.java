@@ -39,11 +39,9 @@ public class T4_FakerFormFilling {
         driver.findElement(By.id("currentAddress")).sendKeys(currentAddress);
         driver.findElement(By.id("permanentAddress")).sendKeys(permanentAddress);
 
-        // استخدام JavaScript للنقر على زر Submit
         WebElement submitBtn = driver.findElement(By.id("submit"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitBtn);
 
-        // تحقق أن البيانات تظهر في الـ output
         String output = driver.findElement(By.id("output")).getText();
         Assertions.assertTrue(output.contains(fullName));
         Assertions.assertTrue(output.contains(email));
